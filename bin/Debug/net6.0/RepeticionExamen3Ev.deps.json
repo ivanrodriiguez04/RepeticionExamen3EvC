@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "RepeticionExamen3Ev/1.0.0": {
+        "runtime": {
+          "RepeticionExamen3Ev.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RepeticionExamen3Ev/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

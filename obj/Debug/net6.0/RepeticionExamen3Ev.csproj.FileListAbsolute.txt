@@ -1,0 +1,14 @@
+C:\Users\csi22-irodhan\Desktop\Programacion\Recuperacion\RepeticionExamen3Ev\bin\Debug\net6.0\RepeticionExamen3Ev.exe
+C:\Users\csi22-irodhan\Desktop\Programacion\Recuperacion\RepeticionExamen3Ev\bin\Debug\net6.0\RepeticionExamen3Ev.deps.json
+C:\Users\csi22-irodhan\Desktop\Programacion\Recuperacion\RepeticionExamen3Ev\bin\Debug\net6.0\RepeticionExamen3Ev.runtimeconfig.json
+C:\Users\csi22-irodhan\Desktop\Programacion\Recuperacion\RepeticionExamen3Ev\bin\Debug\net6.0\RepeticionExamen3Ev.dll
+C:\Users\csi22-irodhan\Desktop\Programacion\Recuperacion\RepeticionExamen3Ev\bin\Debug\net6.0\RepeticionExamen3Ev.pdb
+C:\Users\csi22-irodhan\Desktop\Programacion\Recuperacion\RepeticionExamen3Ev\obj\Debug\net6.0\RepeticionExamen3Ev.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\csi22-irodhan\Desktop\Programacion\Recuperacion\RepeticionExamen3Ev\obj\Debug\net6.0\RepeticionExamen3Ev.AssemblyInfoInputs.cache
+C:\Users\csi22-irodhan\Desktop\Programacion\Recuperacion\RepeticionExamen3Ev\obj\Debug\net6.0\RepeticionExamen3Ev.AssemblyInfo.cs
+C:\Users\csi22-irodhan\Desktop\Programacion\Recuperacion\RepeticionExamen3Ev\obj\Debug\net6.0\RepeticionExamen3Ev.csproj.CoreCompileInputs.cache
+C:\Users\csi22-irodhan\Desktop\Programacion\Recuperacion\RepeticionExamen3Ev\obj\Debug\net6.0\RepeticionExamen3Ev.dll
+C:\Users\csi22-irodhan\Desktop\Programacion\Recuperacion\RepeticionExamen3Ev\obj\Debug\net6.0\refint\RepeticionExamen3Ev.dll
+C:\Users\csi22-irodhan\Desktop\Programacion\Recuperacion\RepeticionExamen3Ev\obj\Debug\net6.0\RepeticionExamen3Ev.pdb
+C:\Users\csi22-irodhan\Desktop\Programacion\Recuperacion\RepeticionExamen3Ev\obj\Debug\net6.0\RepeticionExamen3Ev.genruntimeconfig.cache
+C:\Users\csi22-irodhan\Desktop\Programacion\Recuperacion\RepeticionExamen3Ev\obj\Debug\net6.0\ref\RepeticionExamen3Ev.dll
