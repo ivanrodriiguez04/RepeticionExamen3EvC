@@ -16,9 +16,9 @@ namespace RepeticionExamen3Ev.Dtos
         private long idPedido;
         private string nombreProducto = "aaaaa";
         private int cantidadProducto = 0;
-        private string fchDeseadaEntrega = "31/12/9999";
+        private DateTime fchDeseadaEntrega=DateTime.Now;
         //Controladores
-        public PedidosDto(long idPedido, string nombreProducto, int cantidadProducto, string fchDeseadaEntrega)
+        public PedidosDto(long idPedido, string nombreProducto, int cantidadProducto, DateTime fchDeseadaEntrega)
         {
             this.IdPedido = idPedido;
             this.NombreProducto = nombreProducto;
@@ -30,13 +30,15 @@ namespace RepeticionExamen3Ev.Dtos
         public long IdPedido { get => idPedido; set => idPedido = value; }
         public string NombreProducto { get => nombreProducto; set => nombreProducto = value; }
         public int CantidadProducto { get => cantidadProducto; set => cantidadProducto = value; }
-        public string FchDeseadaEntrega { get => fchDeseadaEntrega; set => fchDeseadaEntrega = value; }
+        public DateTime FchDeseadaEntrega { get => fchDeseadaEntrega; set => fchDeseadaEntrega = value; }
 
         //Metodo ToString
         override
         public string ToString()
         {
-            string concatenacion =string.Concat("Producto: ",this.nombreProducto,"\nCantidad: ",this.cantidadProducto,"\nFecha entrega: ",this.fchDeseadaEntrega);
+            string concatenacion =string.Concat("Producto: ",this.nombreProducto,
+                                                "\nCantidad: ",this.cantidadProducto,"unidades",
+                                                "\nFecha entrega: ",this.FchDeseadaEntrega.ToString("dd-MM-yyyy"),"\n");
             return concatenacion;
         }
 

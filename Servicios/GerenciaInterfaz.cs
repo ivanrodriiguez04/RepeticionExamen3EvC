@@ -13,10 +13,16 @@ namespace RepeticionExamen3Ev.Servicios
     internal interface GerenciaInterfaz
     {
         /// <summary>
-        /// Metodo que contiene las operaciones del menu de la gerencia
-        /// irodhan -> 05/06/2024
+        /// Metodo que añade un nuevo pedido a la lista
+        /// irodhan -> 5/06/2024
         /// </summary>
-        public void subMenuGerencia();
-        
+        public void nuevoPedido();
+        /// <summary>
+        /// Metodo que muestra las ventas de un dia en especifico
+        /// irodhan -> 10/06/2024
+        /// </summary>
+        public void mostrarVentas();
+
+
     }
 }

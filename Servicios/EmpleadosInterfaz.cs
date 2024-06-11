@@ -13,9 +13,14 @@ namespace RepeticionExamen3Ev.Servicios
     internal interface EmpleadosInterfaz
     {
         /// <summary>
-        /// Metodo que contiene las operaciones del menu de los empleados
-        /// irodhan -> 05/06/2024
+        /// Metodo que crea una venta y la guarda en la lista de ventas
+        /// irodhan -> 10/06/2024
         /// </summary>
-        public void submenuEmpleados();
+        public void anadirVentas();
+        /// <summary>
+        /// Metodo que hace el calculo total de ventas el dia indicado
+        /// irodhan -> 10/06/2024
+        /// </summary>
+        public void calculoVentas();
     }
 }

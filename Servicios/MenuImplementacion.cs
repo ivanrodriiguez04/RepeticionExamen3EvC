@@ -36,7 +36,6 @@ namespace RepeticionExamen3Ev.Servicios
             Console.WriteLine("| 0. Volver al menu principal    |");
             Console.WriteLine("| 1. Añadir ventas               |");
             Console.WriteLine("| 2. Calculo total ventas diario |");
-            Console.WriteLine("| 3. Mostrar ventas del dia      |");
             Console.WriteLine("|--------------------------------|");
             Console.WriteLine("Introduzca la opcion que desea usar: ");
             opcion = Console.ReadKey(true).KeyChar - ('0');
@@ -46,13 +45,13 @@ namespace RepeticionExamen3Ev.Servicios
         public int mostrarMenuYSeleccionGerencia()
         {
             int opcion = 0;
-            Console.WriteLine("|-------------------------------------------|");
-            Console.WriteLine("|               Menu Gerencia               |");
-            Console.WriteLine("|-------------------------------------------|");
-            Console.WriteLine("| 0. Volver al menu principal               |");
-            Console.WriteLine("| 1. Escribir en fichero las ventas del dia |");
-            Console.WriteLine("| 2. Nuevo pedido a los proveedores         |");
-            Console.WriteLine("|-------------------------------------------|");
+            Console.WriteLine("|------------------------------------------------|");
+            Console.WriteLine("|                  Menu Gerencia                 |");
+            Console.WriteLine("|------------------------------------------------|");
+            Console.WriteLine("| 0. Volver al menu principal                    |");
+            Console.WriteLine("| 1. Mostrar ventas del dia y guardar en fichero |");
+            Console.WriteLine("| 2. Nuevo pedido a los proveedores              |");
+            Console.WriteLine("|------------------------------------------------|");
             Console.WriteLine("Introduzca la opcion que desea usar: ");
             opcion = Console.ReadKey(true).KeyChar - ('0');
             return opcion;

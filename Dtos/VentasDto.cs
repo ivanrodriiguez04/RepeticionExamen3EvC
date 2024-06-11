@@ -14,7 +14,7 @@ namespace RepeticionExamen3Ev.Dtos
     {
         //Atributos
         private long idVenta;
-        private int eurosVentas=0;
+        private double eurosVentas=0;
         private DateTime instanteVenta = DateTime.Now;
         
         //Controladores
@@ -28,14 +28,17 @@ namespace RepeticionExamen3Ev.Dtos
 
         //Getters & Setters
         public long IdVenta { get => idVenta; set => idVenta = value; }
-        public int EurosVentas { get => eurosVentas; set => eurosVentas = value; }
+        public double EurosVentas { get => eurosVentas; set => eurosVentas = value; }
         public DateTime InstanteVenta { get => instanteVenta; set => instanteVenta = value; }
 
         //Metodo ToString
         override
         public string ToString()
         {
-            string concatenacion = string.Concat(".......... \nVenta número: ",this.idVenta,"\nEuros: ",this.eurosVentas,"\nInstante de compra: ",this.instanteVenta,"\n..........");
+            string concatenacion = string.Concat(".......... ",
+                                                 "\nVenta número: ",this.idVenta,
+                                                 "\nEuros: ",this.eurosVentas,
+                                                 "\nInstante de compra: ",this.instanteVenta.ToString("dd-MM-yyyy"));
             return concatenacion;
         }
     }

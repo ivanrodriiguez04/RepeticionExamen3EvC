@@ -17,7 +17,7 @@ namespace RepeticionExamen3Ev.Controladores
         //Atributos
         public static List<PedidosDto> listaPedidos=new List<PedidosDto>();
         public static List<VentasDto> listaVentas=new List<VentasDto>();
-        public static string rutaFichero = "C:\\Users\\csi22-irodhan\\Desktop\\Programacion\\Recuperacion\\RepeticionExamen3Ev\\Ficheros\\ficheroPedidos.txt";
+        public static string rutaFichero = "C:\\Users\\csi22-irodhan\\Desktop\\Programacion\\Recuperacion\\RepeticionExamen3Ev\\Ficheros\\";
         /// <summary>
         /// Metodo principal de la aplicacion
         /// irodhan -> 05/06/2024
@@ -49,12 +49,57 @@ namespace RepeticionExamen3Ev.Controladores
                         case 1:
                             Console.WriteLine("[INFO] - Ha seleccionado la opcion 1");
                             Console.WriteLine("[INFO] - Ha seleccionado el menu de gerencia");
-                            gI.subMenuGerencia();
+                            bool volver=false;
+                            do
+                            {
+                                opcion = mI.mostrarMenuYSeleccionGerencia();
+                                switch (opcion)
+                                {
+                                    case 0:
+                                        Console.WriteLine("[INFO] - Ha seleccionado la opcion 0");
+                                        Console.WriteLine("[INFO] - Se va a volver al menu princìpal");
+                                        volver = true;
+                                        break;
+                                    case 1:
+                                        Console.WriteLine("[INFO] - Ha seleccionado la opcion 1");
+                                        gI.mostrarVentas();
+                                        break;
+                                    case 2:
+                                        Console.WriteLine("[INFO] - Ha seleccionado la opcion 2");
+                                        gI.nuevoPedido();
+                                        break;
+                                    default:
+                                        Console.WriteLine("[INFO] - La opcion seleccionada no coincide con ninguna opcion mostrada anteriormente");
+                                        break;
+                                }
+                            } while (!volver);
                             break; 
                         case 2:
                             Console.WriteLine("[INFO] - Ha seleccionado la opcion 2");
                             Console.WriteLine("[INFO] - Ha seleccionado el menu de empleados");
-                            eI.submenuEmpleados();
+                            bool volver2=false;
+                            do
+                            {
+                                opcion = mI.mostrarMenuYSeleccionEmpleados();
+                                switch (opcion)
+                                {
+                                    case 0:
+                                        Console.WriteLine("[INFO] - Ha seleccionado la opcion 0");
+                                        volver2 = true;
+                                        break;
+                                    case 1:
+                                        Console.WriteLine("[INFO] - Ha seleccionado la opcion 1");
+                                        eI.anadirVentas();
+                                        break;
+                                    case 2:
+                                        Console.WriteLine("[INFO] - Ha seleccionado la opcion 2");
+                                        eI.calculoVentas();
+                                        break;
+                                    default:
+                                        Console.WriteLine("[INFO] - La opcion seleccionada por el usuario no coincide con ninguna opcion mostrada anteriormente");
+                                        break;
+                                }
+                            } while (!volver2);
                             break;
                         default:
                             Console.WriteLine("[INFO] - La opcion indicada no coincide con ninguna opcion mostrada anteriormente.");

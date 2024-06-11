@@ -1,4 +1,5 @@
 ﻿using RepeticionExamen3Ev.Dtos;
+using RepeticionExamen3Ev.Servicios;
 using RepeticionExamen3Ev.Utils;
 using System;
 using System.Collections.Generic;
@@ -14,62 +15,57 @@ namespace RepeticionExamen3Ev.Servicios
     /// </summary>
     internal class GerenciaImplementacion : GerenciaInterfaz
     {
-        public void subMenuGerencia()
+        public void nuevoPedido() 
         {
-            //Objetos
-            MenuInterfaz mI = new MenuImplementacion();
-            FicheroInterfaz fI = new FicheroImplementacion();
             //Variables
-            int opcion = 0;
-            bool cerrarMenu = false;
+            string confirmacion = "n";
             do
             {
-                opcion = mI.mostrarMenuYSeleccionGerencia();
-                switch (opcion)
-                {
-                    case 0:
-                        Console.WriteLine("[INFO] - Ha seleccionado la opcion 0");
-                        Console.WriteLine("[INFO] - Se va a volver al menu princìpal");
-                        cerrarMenu = true;
-                        break;
-                    case 1:
-                        Console.WriteLine("[INFO] - Ha seleccionado la opcion 1");
-                        fI.escribirFichero();
-                        break;
-                    case 2:
-                        Console.WriteLine("[INFO] - Ha seleccionado la opcion 2");
-                        nuevoPedido();
-                        break;
-                    default:
-                        Console.WriteLine("[INFO] - La opcion seleccionada no coincide con ninguna opcion mostrada anteriormente");
-                        break;
-                }
-            } while (!cerrarMenu);
+                PedidosDto pedido = crearPedido();
+                Controladores.Program.listaPedidos.Add(pedido);
+                Console.WriteLine("Quiero hacer otro pedido:(s=si || n=no)");
+                confirmacion = Console.ReadLine();
+            } while (confirmacion == "s");
+            foreach (PedidosDto pedido in Controladores.Program.listaPedidos) 
+            {
+                Console.WriteLine(pedido.ToString());
+            }
+            
+        }
+        /// <summary>
+        /// Metodo que crea un nuevo pedido
+        /// irodhan -> 05/06/2024
+        /// </summary>
+        /// <returns>Devuelve un objeto con toda la informacion necesaria del pedido</returns>
+        private PedidosDto crearPedido() 
+        {
+            PedidosDto nuevoPedido = new PedidosDto();
+            nuevoPedido.IdPedido = Utils.Utilidades.asignarIdPedido();
+            Console.WriteLine("Introduce el nombre del producto: ");
+            nuevoPedido.NombreProducto = Console.ReadLine();
+            Console.WriteLine("Introduce la cantidad del producto: ");
+            nuevoPedido.CantidadProducto = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Introduce la fecha de entrega deseada(dd-MM-yyyy): ");
+            nuevoPedido.FchDeseadaEntrega = Convert.ToDateTime(Console.ReadLine());
+            return nuevoPedido;
         }
 
-        private void nuevoPedido() 
+        public void mostrarVentas()
         {
-            PedidosDto pedido = crearPedido();
-            Controladores.Program.listaPedidos.Add(pedido);
-        }
-        private PedidosDto crearPedido() 
-        { 
-            //Variables
-            char confirmacion = 'a';
-            do 
+            FicheroInterfaz fI = new FicheroImplementacion();
+            Console.WriteLine("Indica la fecha deseada(dd-MM-yyyy): ");
+            DateTime fecha = Convert.ToDateTime(Console.ReadLine());
+            foreach (VentasDto venta in Controladores.Program.listaVentas)
             {
-                PedidosDto nuevoPedido = new PedidosDto();
-                nuevoPedido.IdPedido = Utils.Utilidades.asignarIdPedido();
-                Console.WriteLine("Introduce el nombre del producto: ");
-                nuevoPedido.NombreProducto = Console.ReadLine();
-                Console.WriteLine("Introduce la cantidad del producto: ");
-                nuevoPedido.CantidadProducto=Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Introduce la fecha de entrega deseada(dd/MM/yyyy): ");
-                nuevoPedido.FchDeseadaEntrega = Console.ReadLine();
-                Console.WriteLine("Quiero hacer otro pedido:(s=si || n=no)");
-                confirmacion=Convert.ToChar(Console.ReadLine());
-                return nuevoPedido;
-            } while (confirmacion == 's');
+               DateTime fch = venta.InstanteVenta;
+                if (fch.Equals(fecha))
+                {
+                    Console.WriteLine(venta.ToString());
+                    Utils.Utilidades.rutaFicheroCompleta(fecha);
+                }
+            }
+
+
         }
     }
 }
