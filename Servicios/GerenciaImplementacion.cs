@@ -58,10 +58,11 @@ namespace RepeticionExamen3Ev.Servicios
             foreach (VentasDto venta in Controladores.Program.listaVentas)
             {
                DateTime fch = venta.InstanteVenta;
-                if (fch.Equals(fecha))
+                if (fch.ToString("dd-MM-yyyy")==fecha.ToString("dd-MM-yyyy"))
                 {
                     Console.WriteLine(venta.ToString());
-                    Utils.Utilidades.rutaFicheroCompleta(fecha);
+                    fI.escribirFichero(fecha);
+                    
                 }
             }
 

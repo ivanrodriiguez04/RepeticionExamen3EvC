@@ -13,12 +13,12 @@ namespace RepeticionExamen3Ev.Servicios
     /// </summary>
     internal class FicheroImplementacion : FicheroInterfaz
     {
-        public void escribirFichero(string rutaFichero)
+        public void escribirFichero(DateTime fecha)
         {
             StreamWriter sw = null;
             try
             {
-                using (sw = new StreamWriter(Utils.Utilidades.rutaFicheroCompleta(rutaFichero)))
+                using (sw = new StreamWriter(Utils.Utilidades.rutaFicheroCompleta(fecha)))
                 {
                     foreach (VentasDto ventas in Controladores.Program.listaVentas)
                     {

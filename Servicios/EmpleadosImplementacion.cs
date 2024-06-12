@@ -36,8 +36,28 @@ namespace RepeticionExamen3Ev.Servicios
         }
         public void calculoVentas() 
         {
+            double aux = 0;
             Console.WriteLine("Introduzca el dia que necesita(dd-MM-yyyy): ");
             string fecha=Console.ReadLine();
+            foreach(VentasDto venta in Controladores.Program.listaVentas) 
+            {
+                if (fecha == venta.InstanteVenta.ToString("dd-MM-yyyy")) 
+                {
+                    aux = aux + venta.EurosVentas;
+                }
+            }
+            for (int fila = 0; fila < Controladores.Program.listaVentas.Count; fila++) 
+            {
+                for (int columna = 0; columna < Controladores.Program.listaVentas.Count-1-fila; columna++) 
+                {
+                    if (Controladores.Program.listaVentas[columna + 1].InstanteVenta > Controladores.Program.listaVentas[columna].InstanteVenta) 
+                    { 
+                        VentasDto auxiliar=Controladores.Program.listaVentas[columna+1];
+                    }
+                }
+            }
+
+            Console.WriteLine(string.Concat("Total ventas: ",aux));
 
         }
         

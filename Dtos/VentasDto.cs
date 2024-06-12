@@ -38,7 +38,7 @@ namespace RepeticionExamen3Ev.Dtos
             string concatenacion = string.Concat(".......... ",
                                                  "\nVenta número: ",this.idVenta,
                                                  "\nEuros: ",this.eurosVentas,
-                                                 "\nInstante de compra: ",this.instanteVenta.ToString("dd-MM-yyyy"));
+                                                 "\nInstante de compra: ",this.instanteVenta.ToString("dd-MM-yyyyThh:mm:ss"));
             return concatenacion;
         }
     }

@@ -52,7 +52,7 @@ namespace RepeticionExamen3Ev.Utils
             return id;
         }
         /// <summary>
-        /// Metodo que pide la fecha para el fichero
+        /// Metodo que crea la ruta completa de la creacion del fichero
         /// irodhan -> 11/06/2024
         /// </summary>
         /// <returns>Devuelve el nombre del fichero</returns>

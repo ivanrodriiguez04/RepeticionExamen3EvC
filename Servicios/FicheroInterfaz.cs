@@ -16,6 +16,6 @@ namespace RepeticionExamen3Ev.Servicios
         /// Metodo que escribe las ventas del dia en un fichero
         /// irodhan -> 05/06/2024
         /// </summary>
-        public void escribirFichero(string rutaFichero);
+        public void escribirFichero(DateTime fecha);
     }
 }
